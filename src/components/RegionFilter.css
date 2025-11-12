@@ -1,0 +1,17 @@
+.filter {
+  position: relative;
+  background: var(--color-elements);
+  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-card);
+  padding: 0 var(--space-400);
+}
+
+.filter__select {
+  border: none;
+  outline: none;
+  background: var(--color-elements);
+  color: var(--color-text);
+  padding: var(--space-400) var(--space-500);
+  width: 200px;
+  cursor: pointer;
+}
