@@ -37,7 +37,7 @@ Users can:
 
 ### Screenshot
 
-![](/screenshots/screenshot-desktop-home-light.png)
+![](./public/screenshots/screenshot-desktop-home-light.png)
 
 ## Live Demo
 
