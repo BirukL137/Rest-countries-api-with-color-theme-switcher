@@ -41,9 +41,9 @@ Users can:
 
 ## Live Demo
 
-🔗 [Frontend Mentor Challenge]()
+🔗 - Solution URL: [Frontend Mentor Challenge](https://www.frontendmentor.io/solutions/countries-explorer-react-rest-api-and-dark-mode-0I_6hT1ojy)
 
-💻 [Vercel]()
+💻 - Live Site URL: [Vercel](https://rest-countries-api-with-color-theme-topaz.vercel.app/)
 
 ## 🧩 My process
 
@@ -117,6 +117,12 @@ If I revisit this project, I’d like to:
 - Implement unit tests using Jest + React Testing Library.
 
 - Include animations when toggling themes or filtering.
+
+### Useful resources
+
+- [REST Countries API](https://restcountries.com/) - Helpful for understanding the structure of the API responses, especially nested fields like currencies, languages, and nativeName.
+- [Frontend Mentor Challenge Page](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca) - Contains the design files, requirements, and style references.
+- [React Router v6 Documentation](https://reactrouter.com/en/main/start/tutorial) - I used this for handling dynamic routing (/country/:id), navigation, and linking border countries. 
 
 ## Author
 
