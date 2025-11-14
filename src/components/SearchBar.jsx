@@ -1,17 +1,33 @@
-import "./SearchBar.css";
+import { useState } from "react";
+import "../styles/SearchBar.css";
+import { Search } from "lucide-react";
 
 const SearchBar = ({ value, onChange }) => {
+  const [focused, setFocused] = useState(false);
+
   return (
-    <div className="search">
+    <form
+      className={`search ${focused ? "search--focused" : ""}`}
+      role="search"
+      onSubmit={(e) => e.preventDefault()}
+    >
+      <label htmlFor="countrySearch" className="sr-only">
+        Search for a country
+      </label>
+
+      <Search className="search__icon" aria-hidden="true" />
+
       <input
+        type="text"
+        id="countrySearch"
         className="search__input"
-        type="search"
         placeholder="Search for a country..."
-        aria-label="Search countries"
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        onFocus={() => setFocused(true)}
+        onBlur={() => setFocused(false)}
       />
-    </div>
+    </form>
   );
 };
 
