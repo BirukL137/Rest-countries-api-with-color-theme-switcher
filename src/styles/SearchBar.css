@@ -1,0 +1,53 @@
+/* =========================================
+   Search Input Component
+   ========================================= */
+
+.search {
+  width: 100%;
+  max-width: 480px;
+  background: var(--color-elements);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-300);
+  padding: 0 var(--space-400);
+  height: var(--input-height);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease;
+}
+
+/* Focus state */
+.search--focused {
+  transform: translateY(-1px);
+}
+
+.search__icon {
+  font-size: var(--space-600);
+  opacity: 0.6;
+}
+
+.search__input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-text);
+  font-size: var(--fs-400);
+}
+
+.search__input::placeholder {
+  color: var(--color-input);
+}
+
+/* Screen reader only text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
