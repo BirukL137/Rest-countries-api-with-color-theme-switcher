@@ -1,0 +1,121 @@
+.filter {
+  position: relative;
+  width: 200px;
+}
+
+.filter__control {
+  width: 100%;
+  background: var(--color-elements);
+  color: var(--color-text);
+  height: var(--input-height);
+  border: none;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--space-400);
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  position: relative;
+}
+
+.filter__control:hover,
+.filter__control:focus-visible {
+  box-shadow: var(--shadow-md);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+/* Visible selected value */
+.filter__value {
+  opacity: 0.9;
+  font-size: var(--fs-400);
+}
+
+/* Clear button inside the box */
+.filter__clear {
+  font-size: var(--fs-400);
+  cursor: pointer;
+  opacity: 0.6;
+  padding-inline: var(--space-200);
+  transition: opacity 0.25s ease-in-out;
+}
+
+.filter__clear:hover {
+  opacity: 1;
+}
+
+/* Middle divider line */
+.filter__divider {
+  width: 1px;
+  height: 60%;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+html[data-theme="dark"] .filter__divider {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ▼ dropdown arrow */
+.filter__arrow {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-right: 2px solid var(--color-text);
+  border-bottom: 2px solid var(--color-text);
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+}
+
+.filter__arrow--open {
+  transform: translateY(3px) rotate(-135deg);
+}
+
+/* ===============================================
+   OPTIONS PANEL — floating menu
+   =============================================== */
+
+.filter__options {
+  position: absolute;
+  top: calc(var(--input-height) + var(--dropdown-gap));
+  left: 0;
+  right: 0;
+  background: var(--color-elements);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-300) 0;
+  z-index: 10;
+  animation: dropdownFade 0.2s ease forwards;
+}
+
+/* Dropdown animation */
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter__option {
+  padding: var(--space-300) var(--space-400);
+  cursor: pointer;
+  font-size: var(--fs-400);
+}
+
+.filter__option:hover {
+  background: rgba(0, 0, 0, 0.07);
+}
+
+html[data-theme="dark"] .filter__option:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* Prevent blue focus outline on click */
+.filter__option:focus {
+  outline: none;
+}
