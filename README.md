@@ -23,23 +23,23 @@ Built with React, designed from the original Frontend Mentor design, and develop
 
 Users can:
 
-🌍 View all countries and their details from the REST Countries API.
+- 🌍 View all countries and their details from the REST Countries API.
 
-🔍 Search for a country by name.
+- 🔍 Search for a country by name.
 
-🌎 Filter countries by region.
+- 🌎 Filter countries by region.
 
-🗺️ View detailed information about a selected country.
+- 🗺️ View detailed information about a selected country.
 
-🔄 Navigate to neighboring (border) countries.
+- 🔄 Navigate to neighboring (border) countries.
 
-🌗 Toggle between light and dark themes (stored in localStorage).
+- 🌗 Toggle between light and dark themes (stored in localStorage).
 
 ### Screenshot
 
 ![](/screenshots/screenshot-desktop-home-light.png)
 
-##🚀 Live Demo
+## Live Demo
 
 🔗 [Frontend Mentor Challenge]()
 
@@ -49,37 +49,37 @@ Users can:
 
 ### ⚙️ Built With
 
-⚛️ React (Vite)
+- ⚛️ React (Vite)
 
-🎨 CSS with BEM methodology
+- 🎨 CSS with BEM methodology
 
-🌗 Design tokens for color, spacing, and typography
+- 🌗 Design tokens for color, spacing, and typography
 
-🧠 React Context API for theme state management
+- 🧠 React Context API for theme state management
 
-🧭 React Router v6 for navigation
+- 🧭 React Router v6 for navigation
 
-💾 REST Countries API v3.1
+- 💾 REST Countries API v3.1
 
-🪄 Custom Hooks for fetching and filtering data
+- 🪄 Custom Hooks for fetching and filtering data
 
-📱 Mobile-first, responsive design
+- 📱 Mobile-first, responsive design
 
-### ✨ Features
+### Features
 
-Dark / Light Mode — toggles instantly and remembers preference.
+- Dark / Light Mode — toggles instantly and remembers preference.
 
-Search & Filter — real-time filtering with useMemo for performance.
+- Search & Filter — real-time filtering with useMemo for performance.
 
-Responsive Grid — adapts smoothly from mobile to desktop.
+- Responsive Grid — adapts smoothly from mobile to desktop.
 
-Dynamic Country Details — fetched via route params (/country/:code).
+- Dynamic Country Details — fetched via route params (/country/:code).
 
-Border Country Navigation — explore related countries with one click.
+- Border Country Navigation — explore related countries with one click.
 
-Skeleton Loaders — smooth loading feedback for better UX.
+- Skeleton Loaders — smooth loading feedback for better UX.
 
-### 💡 What I Learned
+### What I Learned
 
 This project helped me think more like a frontend architect:
 
@@ -91,7 +91,7 @@ This project helped me think more like a frontend architect:
 
 - Writing clean, reusable, and accessible components.
 
-### ⚙️ How to Run Locally
+### How to Run Locally
 
 ```bash
 # Clone the repository
@@ -106,7 +106,7 @@ npm install
 npm run dev
 ```
 
-### 🚧 Future Improvements
+### Future Improvements
 
 If I revisit this project, I’d like to:
 
@@ -123,7 +123,7 @@ If I revisit this project, I’d like to:
 - Frontend Mentor - [@BirukL137](https://www.frontendmentor.io/profile/BirukL137)
 - GitHub - [@BirukL137](https://github.com/BirukL137/Rest-countries-api-with-color-theme-switcher)
 
-## ❤️ Acknowledgments
+## Acknowledgments
 
 Thanks to Frontend Mentor for providing the challenge and original design.
 
