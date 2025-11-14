@@ -1,4 +1,4 @@
-#🌍 REST Countries API with Color Theme Switcher - Frontend Mentor
+# 🌍 REST Countries API with Color Theme Switcher - Frontend Mentor
 
 A responsive web app that lets users explore information about countries around the world — complete with dark/light mode, dynamic routing, and real-time filtering.
 
