@@ -1,0 +1,17 @@
+.footer {
+  margin-top: var(--space-900);
+  padding: var(--space-700) 0;
+  background: var(--color-element);
+  box-shadow: var(--shadow-sm);
+}
+
+.footer__credit {
+  text-align: center;
+  font-size: var(--fs-300);
+  color: var(--color-text);
+  opacity: 0.85;
+}
+
+.footer__credit span {
+  font-weight: 600;
+}
