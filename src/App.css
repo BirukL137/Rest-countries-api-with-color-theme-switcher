@@ -1,5 +1,4 @@
-.main {
-  max-width: var(--container-max);
+.app {
+  width: min(90%, 1200px);
   margin: 0 auto;
-  padding: var(--space-600);
 }
