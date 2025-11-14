@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
+
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import CountryDetail from "./pages/CountryDetail";
-import { ThemeProvider } from "./context/ThemeContext";
 import "./App.css";
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
     <ThemeProvider>
       <Router>
         <Header />
-        <main className="main">
+        <main className="app">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/country/:code" element={<CountryDetail />} />
