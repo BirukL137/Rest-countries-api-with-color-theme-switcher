@@ -8,9 +8,9 @@ export const ThemeProvider = ({ children }) => {
     return localStorage.getItem("theme") || "light";
   });
 
-  // Apply class to <html> whenever theme changes
+  // Apply data-theme to <html> whenever theme changes
   useEffect(() => {
-    document.documentElement.classList.toggle("theme-dark", theme === "dark");
+    document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 
