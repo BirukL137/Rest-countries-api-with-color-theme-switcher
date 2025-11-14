@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import CountryDetail from "./pages/CountryDetail";
 import "./App.css";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             <Route path="/country/:code" element={<CountryDetail />} />
           </Routes>
         </main>
+        <Footer />
       </Router>
     </ThemeProvider>
   );
