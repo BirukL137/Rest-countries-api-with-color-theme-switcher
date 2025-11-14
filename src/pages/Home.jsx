@@ -4,7 +4,7 @@ import RegionFilter from "../components/RegionFilter";
 import SearchBar from "../components/SearchBar";
 import { useCountries } from "../hooks/useCountries";
 import { useDebounce } from "../hooks/useDebounce";
-import "./Home.css";
+import "../styles/Home.css";
 
 const Home = () => {
   const { countries, loading, error } = useCountries();
