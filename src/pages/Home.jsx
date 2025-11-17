@@ -5,6 +5,7 @@ import SearchBar from "../components/SearchBar";
 import { useCountries } from "../hooks/useCountries";
 import { useDebounce } from "../hooks/useDebounce";
 import "../styles/Home.css";
+import SkeletonCard from "../components/SkeletonCard";
 
 const Home = () => {
   const { countries, loading, error } = useCountries();
@@ -24,7 +25,16 @@ const Home = () => {
     });
   }, [countries, debouncedSearch, region]);
 
-  if (loading) return <p className="home__status">Loading countries...</p>;
+  // if (loading) return <p className="home__status">Loading countries...</p>;
+  if (loading)
+    return (
+      <section className="home__grid">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <SkeletonCard key={i} />
+        ))}
+      </section>
+    );
+
   if (error) return <p className="home__status">Error: {error}</p>;
 
   return (
