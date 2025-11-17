@@ -9,17 +9,30 @@ const CountryDetail = () => {
   const [country, setCountry] = useState(null);
   const [borderCountries, setBorderCountries] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchCountry = async () => {
       try {
         setLoading(true);
+        // clear previous error when starting a new fetch
+        setError(null);
+
         const res = await fetch(`https://restcountries.com/v3.1/alpha/${code}`);
+        if (!res.ok) {
+          // API returned a non-2xx status (e.g. 404)
+          throw new Error(`Failed to load country (status ${res.status})`);
+        }
+
         const data = await res.json();
+        if (!Array.isArray(data) || data.length === 0) {
+          throw new Error("Country data not found");
+        }
+
         setCountry(data[0]);
+        // console.log("details: ", data[0]);
       } catch (err) {
-        console.error("Failed to load country details", err);
+        setError(err);
       } finally {
         setLoading(false);
       }
@@ -38,8 +51,23 @@ const CountryDetail = () => {
         const res = await fetch(
           `https://restcountries.com/v3.1/alpha?codes=${borderQuery}`
         );
+
+        if (!res.ok) {
+          // If borders request fails, just log and keep current state (non-fatal)
+          console.error(
+            `Failed to load border countries (status ${res.status})`
+          );
+          return;
+        }
+
         const data = await res.json();
+        if (!Array.isArray(data)) {
+          console.error("Unexpected border countries response", data);
+          return;
+        }
+
         setBorderCountries(data);
+        // console.log("border: ", data);
       } catch (err) {
         console.error("Failed to load borders", err);
       }
@@ -49,7 +77,12 @@ const CountryDetail = () => {
   }, [country]);
 
   if (loading) return <p className="detail__status">Loading country...</p>;
-  // if (error) return <p className="detail__status">{error}</p>;
+  if (error)
+    return (
+      <p className="detail__status" role="alert">
+        {error?.message ? error.message : String(error)}
+      </p>
+    );
   if (!country) return <p className="detail__status">Country not found.</p>;
 
   const {
@@ -75,15 +108,19 @@ const CountryDetail = () => {
 
   return (
     <section className="country-detail">
-      <button className="country-detail__back" onClick={() => navigate(-1)}>
+      <button
+        className="country-detail__back"
+        onClick={() => navigate(-1)}
+        aria-label="Go back"
+      >
         ← Back
       </button>
 
       <div className="country-detail__content">
         {/* Flag */}
         <img
-          src={flags.svg}
-          alt={flags.alt || `${name.common} flag`}
+          src={flags?.svg}
+          alt={flags.alt || `${name?.common} flag`}
           className="country-detail__flag"
         />
 
