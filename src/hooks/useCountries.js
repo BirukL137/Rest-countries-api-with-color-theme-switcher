@@ -15,7 +15,7 @@ export const useCountries = () => {
         if (!res.ok) throw new Error("Failed to fetch countries");
         const data = await res.json();
         setCountries(data);
-        console.log("data: ", data);
+        // console.log("data: ", data);
       } catch (err) {
         setError(err.message);
       } finally {
