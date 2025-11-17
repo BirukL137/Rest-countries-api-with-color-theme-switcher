@@ -1,7 +1,7 @@
 .footer {
   margin-top: var(--space-900);
   padding: var(--space-700) 0;
-  background: var(--color-element);
+  /* background: var(--color-elements); */
   box-shadow: var(--shadow-sm);
 }
 
@@ -14,4 +14,16 @@
 
 .footer__credit span {
   font-weight: 600;
+}
+
+/* Focus styles for accessibility */
+.footer__credit a:focus {
+  outline: 3px solid var(--color-focus, #4d90fe);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.footer__sep {
+  margin: 0 0.5rem;
+  opacity: 0.8;
 }
