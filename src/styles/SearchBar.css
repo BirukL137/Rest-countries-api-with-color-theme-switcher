@@ -23,7 +23,7 @@
 }
 
 .search__icon {
-  font-size: var(--space-600);
+  font-size: var(--fs-700);
   opacity: 0.6;
 }
 
