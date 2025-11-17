@@ -1,0 +1,55 @@
+.skeleton-card {
+  background: var(--color-element);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+  padding: var(--space-400);
+}
+
+.skeleton-card__flag {
+  width: 100%;
+  height: 160px;
+  background: var(--color-skeleton);
+  border-radius: var(--radius-sm);
+}
+
+.skeleton-card__text {
+  height: 1rem;
+  background: var(--color-skeleton);
+  margin-top: var(--space-200);
+  border-radius: var(--radius-sm);
+}
+
+.skeleton-card__text.short {
+  width: 60%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+:root {
+  --color-skeleton: linear-gradient(
+    90deg,
+    var(--color-bg) 25%,
+    var(--color-element) 50%,
+    var(--color-bg) 75%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
