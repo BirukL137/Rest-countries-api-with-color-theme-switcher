@@ -1,5 +1,5 @@
 .skeleton-card {
-  background: var(--color-element);
+  background: var(--color-elements);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
   overflow: hidden;
@@ -47,7 +47,7 @@
   --color-skeleton: linear-gradient(
     90deg,
     var(--color-bg) 25%,
-    var(--color-element) 50%,
+    var(--color-elements) 50%,
     var(--color-bg) 75%
   );
   background-size: 400% 100%;
